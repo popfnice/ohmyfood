@@ -179,6 +179,7 @@ figure img {
 
 /* Import all layouts-sass files */
 /* Bannière en pied de page */
+
 .foot {
   background-color: #353535;
   width: 100%;
@@ -206,6 +207,27 @@ figure img {
 .foot__links .fa-hands-helping {
   margin-right: 10px;
 }
+@media screen and (min-width: 1024px) {
+  .foot{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 60px 40px 30px 0px
+    
+  }
+  .foot h2{
+    position: relative;
+    left: 90%;
+    margin-top: 10px;
+    
+  }
+  .foot__links{
+    display: flex;
+    position: absolute;
+    left: 35%;
+    gap: 20px;
+  }
+}
+
 
 /* Bannière en pied de page */
 /* Bannière d'en-tête de chaque pages */
