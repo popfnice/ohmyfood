@@ -1,0 +1,22 @@
+
+nav {
+    background-color:$colour-lightnessgrey;
+    .location {
+        width:100%;
+        @extend %flex-center;
+        &__title {
+            width:100%;
+            background-color:$colour-lightgrey;
+            @extend %flex-center;
+            .fa-map-marker-alt {
+                margin-right:25px;
+            }
+        }
+    }  
+    .exploration {
+        width:90%;
+        @extend %flex-center;
+        text-align:center;
+        flex-direction:column;
+    }  
+}

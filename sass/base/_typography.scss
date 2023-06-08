@@ -1,0 +1,26 @@
+/* Ajout des nouvelles polices */
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Shrikhand&display=swap);
+/* Ajout des nouvelles polices */
+
+/* Création des variables pour les différentes polices */
+$font-title: 'Shrikhand';
+$font-text: 'Roboto';
+/* Création des variables pour les différentes polices */
+
+/* Pré-réglage des polices des contenus de pages */
+body {
+    font-family: $font-text;
+    footer {
+        a, p, h4 {
+            color:$colour-quaternary;
+            font-family:$font-text
+        }
+        
+         h2 {
+                color:$colour-quaternary;
+                font-family:$font-title;
+        }
+    }   
+}
+/* Pré-réglage des polices des contenus de pages */

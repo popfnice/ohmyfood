@@ -1,0 +1,242 @@
+
+
+.functioning {
+    width:100%;
+    height:auto;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    &__title {
+        width:90%;
+        display:flex;
+        justify-content: flex-start;
+    }
+    .tutorial {
+        margin:0 0 30px 0;
+        padding:0px;
+        width:90%;
+        display:flex;
+        justify-content: space-around;
+        align-items:center; 
+        @include tablet-only {
+            flex-direction:column;
+        }
+        &__step {
+            position:relative;
+            list-style: none;
+            width:25%;
+            padding:25px;
+            margin:20px 0 20px 0;
+            background-color:$colour-lightnessgrey;
+            border-radius:20px;
+            box-shadow: 5px 5px 5px $colour-lightgrey;
+            i {
+                font-size:16px;
+                margin-right:15px;
+                color:grey;
+            }
+            @include tablet-only {
+                width:90%;
+                margin:10px 0 10px 0;
+            }
+            @include mobile-only {
+                width:85%;
+            }
+        }
+        &__number {
+            @extend %flex-center;
+            position:absolute;
+            top:30%;
+            left:-2.25%;
+            height:25px;
+            width:25px;
+            border-radius:25px;
+            color:white;
+            background-color:$colour-primary;
+            @include tablet-only {
+                right:98%;
+            }
+            @include mobile-only {
+                right:94%;
+            }
+        }
+    }
+}
+.restaurants {
+    width:100%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    background-color:$colour-lightnessgrey;
+    &__title {
+        width:90%;
+        margin:30px 0 10px 0;
+        display:flex;
+        justify-content: flex-start;
+    }
+    .choices {
+        width:90%;
+        margin:0 0 100px 0;
+        @extend %flex-center;
+        justify-content: space-between;
+        flex-wrap:wrap;
+        &__first {
+            @include restaurants;
+        }
+        &__second {
+            @include restaurants;
+        }
+        &__third {
+            @include restaurants;
+        }
+        &__fourth {
+            @include restaurants;
+        }
+    }
+}
+
+
+
+/* Section pour chaque pages de menus */
+.card {
+    width:100%;
+    height:auto;
+    @extend %flex-center;
+    flex-direction:column;
+    .image {
+        width:100%;
+        height:450px;
+        img {
+            width:100%;
+            height:500px;
+            object-fit: cover;
+        }
+    }
+    .menu {
+        z-index:1;
+        width:90%;
+        @extend %flex-center;
+        flex-direction:column;
+        border-radius:30px 30px 0 0;
+        background-color:$colour-lightnessgrey;
+        @include tablet-only {
+            width:100%;
+        }
+        &__title {
+            width:90%;
+            display:flex;
+            align-items:center;
+            justify-content: space-between;
+            h2 {
+                font-family:'Shrikhand';
+                width:80%;
+            }
+            .title__heart {
+                cursor:pointer;
+                @extend %flex-center;
+                width:10%;
+                @include tablet-only {
+                    width:13%;
+                }
+                @include mobile-only {
+                    width:20%;
+                }
+                &--empty {
+                    position:relative;
+                    color:black;
+                    font-size:22px;
+                }
+                &--filled {
+                    position:absolute;
+                    color:$colour-lightnessgrey;
+                    font-size:20px;
+                    &:hover {
+                        animation:filling 400ms forwards;
+                    }
+                }
+            }
+        }
+        &__card {
+            width:90%;
+            display:flex;
+            justify-content: flex-start;
+            flex-direction:column;
+            .underline {
+                width:50px;
+                @extend %underliner;
+            }
+            .food {
+                width:100%;
+                height:auto;
+                @extend %flex-center;
+                flex-direction:column;
+                cursor:pointer;
+                &__choice {
+                    width:100%;
+                    height: 80px;
+                    @extend %flex-center;
+                    justify-content: space-between;
+                    box-shadow: 5px 5px 5px $colour-lightgrey;
+                    border-radius:20px;
+                    margin:10px 0 10px 0;
+                    background-color:white;
+                    &__title {
+                        width:80%;
+                        height:60%;
+                        @extend %flex-center;
+                        flex-direction:column;
+                        justify-content: space-between;
+                        h4 {
+                            margin:0;
+                            width:90%;
+                            font-weight:400;
+                            white-space:nowrap;
+                            overflow:hidden;
+                            text-overflow: ellipsis;
+                        }
+                        p {
+                            margin:0;
+                            width:90%;
+                            font-size:14px;
+                            font-weight:100;
+                            white-space:nowrap;
+                            overflow:hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                    }
+                    &__price {
+                        width:20%;
+                        height:60%;
+                        @extend %flex-center;
+                        p {
+                            height:100%;
+                            width:80%; 
+                            display:flex;
+                            justify-content: flex-end;
+                            align-items:flex-end;
+                            font-size:16px; 
+                            font-weight:bolder;
+                        }
+                    }
+                    &__select {
+                        opacity: 100%;
+                        @extend %flex-center;
+                        height:80px;
+                        border-radius:0 20px 20px 0 ;
+                        background-color:$colour-tertiary;
+                        transform-origin:right;
+                        transform:scaleX(0);
+                        &-icon {
+                            font-size:30px;
+                            color:white;
+                            transform:rotate(360deg);
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
+/* Section pour chaque pages de menus */
+
