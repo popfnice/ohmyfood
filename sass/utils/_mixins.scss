@@ -1,7 +1,7 @@
 /* BREAKPOINTS */
 /* Breakpoint pour mobile */
 @mixin mobile-only {
-    @media screen and(max-width:map-get($breakpoints,mobile)) {
+    @media screen and (max-width:map-get($breakpoints,mobile)) {
         @content;
     }
 }
@@ -9,7 +9,7 @@
 
 /* Breakpoint pour tablet */
 @mixin tablet-only {
-    @media screen and(max-width:map-get($breakpoints,tablet)) {
+    @media screen and (max-width:map-get($breakpoints,tablet)) {
         @content;
     }
 }
